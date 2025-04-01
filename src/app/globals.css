@@ -98,7 +98,7 @@
 
 @layer base {
   * {
-    @apply border-gray-200;
+    /* Remove problematic border class */
   }
   body {
     @apply bg-background text-foreground;
