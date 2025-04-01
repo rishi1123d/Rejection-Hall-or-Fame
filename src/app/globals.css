@@ -100,15 +100,17 @@
   * {
     border-style: solid;
     border-width: 0;
+    border-color: hsl(var(--border));
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
   }
 }
 
 .hero-pattern {
-  background-color: #f8f9fa;
-  background-image: radial-gradient(#e9d5ff 0.5px, transparent 0.5px), radial-gradient(#e9d5ff 0.5px, #f8f9fa 0.5px);
+  background-color: hsl(var(--background));
+  background-image: radial-gradient(hsla(var(--primary), 0.2) 0.5px, transparent 0.5px), radial-gradient(hsla(var(--primary), 0.2) 0.5px, hsl(var(--background)) 0.5px);
   background-size: 20px 20px;
   background-position: 0 0, 10px 10px;
 }
@@ -251,18 +253,6 @@
     text-align: center !important;
     justify-content: center !important;
   }
-
-  .mobile-p-4 {
-    padding: 1rem !important;
-  }
-
-  .mobile-mt-4 {
-    margin-top: 1rem !important;
-  }
-
-  .mobile-gap-2 {
-    gap: 0.5rem !important;
-  }
 }
 
 /* Fix for iOS Safari */
@@ -318,9 +308,7 @@
   bottom: 0;
 }
 
-/* Add these styles to the end of the file */
-
-/* Styles for the person image in dialog */
+/* Person image styles */
 .person-image {
   border-radius: 0.5rem;
   overflow: hidden;
